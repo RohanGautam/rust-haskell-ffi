@@ -5,7 +5,5 @@ Using the haskell FFI and using C types for interop
 ## Running
 
 ```bash
-make && ./main
-# to clean
-make clean
+make && ./main && make clean
 ```

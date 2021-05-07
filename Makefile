@@ -1,4 +1,4 @@
-EXT=rlib
+EXT=rlib # on linux
 all: target/release/libhaskell_ffi.$(EXT)
 	stack ghc -- src/Main.hs target/release/libhaskell_ffi.$(EXT) -o main
 
