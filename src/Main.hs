@@ -7,8 +7,10 @@ foreign import ccall "load_something" loadSomething :: CInt -> Bool
 
 main = do
   putStrLn "starting"
-  let loadop = loadSomething 1400
-  putStrLn $ show 4 ++ " * 2 = " ++ show loadop
+  -- load something for 5 seconds
+  let isLoaded = loadSomething 5000 -- lazily executed, so we make "use" of the output below
+  putStrLn $ "Loaded: " ++ show isLoaded 
+  -- do some caclulation
   let input = 4
   let output = doubleInput input
   putStrLn $ show input ++ " * 2 = " ++ show output
